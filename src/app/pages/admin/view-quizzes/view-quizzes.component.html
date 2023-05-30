@@ -1,0 +1,49 @@
+<mat-card class="mt10" *ngFor="let q of quizzes">
+    <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{q.title}}</mat-card-title>
+    </mat-card-header>
+        <mat-list>
+            <div mat-subheader></div>
+            <mat-list-item >
+                <mat-icon matListItemIcon>category</mat-icon>
+                <div matListItemTitle>{{q.description}}</div>
+               
+             <mat-divider></mat-divider> 
+        </mat-list-item>
+           <button mat-flat-button class="ml20" 
+            [routerLink]="'/admin/view-question/' +q.qid+ '/' +q.title"
+           color="accent">Question</button>
+           <button mat-stroked-button class="ml20" color="accent">maxMarks:{{q.maxMarks}}</button>
+           <button mat-stroked-button class="ml20" color="accent">NoOfQuestions:{{q.numberofQuestions}}</button>
+           <button mat-flat-button 
+           class="ml20" 
+           color="accent" 
+           [routerLink]="['/admin/update-quizzes',q.qid]"
+           >
+           update
+           </button>
+           <button mat-flat-button class="ml20" color="accent">Attempts</button>
+           <button mat-flat-button class="ml20" color="warn" 
+            (click)="deleteQuiz(q.qid)">
+            Delete</button>
+             <!-- active field -->
+             <div mat-card-avatar class="example-header-image-second mt20"></div>
+             <mat-slide-toggle
+             [(ngModel)]="q.active"
+             name="active"
+             class="ml10 mb10"
+             [color]="color"
+             [checked]="checked"
+             [disabled]="disabled">
+           Quizzed 
+         </mat-slide-toggle>
+         
+        </mat-list>
+        
+       
+</mat-card>
+<div class="container text-center mt20">
+    <button mat-raised-button color="accent" routerLink="/admin/add-quizzes">Add new quizzes</button>
+</div>
+

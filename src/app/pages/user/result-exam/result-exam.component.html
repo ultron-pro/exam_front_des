@@ -1,0 +1,26 @@
+<div class="boostrap-wrapper">
+    <div class="row mt20">
+        <div class="col-md-6 offset-md-3">
+            <mat-card>
+                <mat-card-header class="text-center" >
+                    <mat-card-title>
+                        Quizes Results
+                        <h3>Result of Your Exam</h3>
+                    </mat-card-title>
+                </mat-card-header>
+                <mat-card-content class="text-center">
+                    
+                    <h4>Marks Got:{{marksGot}}</h4>
+                    <h4>correct Answer:-{{correctAnswers}}</h4>
+                    <h4>Questions Attempted:-{{attempted}}</h4>
+                   
+                </mat-card-content>
+                <mat-card-actions class="text-center" >
+                    <button (click)="printPage()" mat-raised-button class="mr10" color="primary">Print</button>
+                    <button mat-raised-button  [routerLink]="'/user-dashboard/0'" color="accent">Home</button>
+            
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+</div>

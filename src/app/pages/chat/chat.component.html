@@ -1,0 +1,11 @@
+<div class="container">
+    <h1>ChatGPT Integration</h1>
+    <div class="messages">
+      <div *ngFor="let message of messages" class="message">{{ message }}</div>
+    </div>
+    <div class="input-container">
+      <input [(ngModel)]="userMessage" class="input" placeholder="Type your message" (keyup.enter)="sendMessage()">
+      <button class="button" (click)="sendMessage()">Send</button>
+    </div>
+  </div>
+  

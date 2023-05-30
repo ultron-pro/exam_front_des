@@ -1,0 +1,10 @@
+.example-header-image {
+    background-image: url('../../../../assets/exam.png');
+    background-size: cover;
+  }
+
+  .example-header-image-second {
+    background-image: url('../../../../assets/paper-pla.png');
+    
+    background-size: cover;
+  }

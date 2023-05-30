@@ -1,0 +1,45 @@
+<mat-card  class="example-card" *ngIf="user">
+    <h4>your profile details</h4>
+      
+    <mat-card-content>
+        <div class="boostrap-wrapper text-center">
+            <div class="container">
+                <img src="../../../assets/22-223968_default-profile-picture-circle-hd-png-download.png" alt="" class="profile-image" />
+                <h4 class="mt20" >name:{{user.firstName}}  {{user.lastName}}</h4>
+
+                <div class="row">
+                    <div class="col-md-10 offset-md-1">
+                      <table class="table">
+                        <tr>
+                            <td>username</td>
+                            <td>{{user.username}}</td>
+                        </tr>
+                        <tr>
+                            <td>userid</td>
+                            <td>ExamId{{user.id}}</td>
+                        </tr>
+                        <tr >
+                            <td >phoneno</td>
+                            <td >{{user.phone}}</td>
+                        </tr>
+                        <tr>
+                            <td>Role</td>
+                            <td>{{user.authorities[0].authority}}</td>
+                        </tr>
+                        <tr>
+                            <td>status</td>
+                            <td>{{user.enabled? "active":"nonactive"}}</td>
+                        </tr>
+                      </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </mat-card-content>
+    
+    <mat-card-actions>
+        <button mat-button color="primary">Primary</button>
+        <button mat-button color="accent">Accent</button>
+    </mat-card-actions>
+</mat-card>

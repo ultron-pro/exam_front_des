@@ -1,0 +1,16 @@
+<mat-card>
+    <mat-list>
+        <div mat-subheader>All Categories</div>
+        <mat-list-item *ngFor="let folder of categoires">
+            <mat-icon matListItemIcon>category</mat-icon>
+            <div matListItemTitle>{{folder.title}}</div>
+            <div matListItemLine>{{folder.description}}</div>
+         <mat-divider></mat-divider> 
+             
+        </mat-list-item>
+    </mat-list>
+     <div class="container text-center mb10">
+        <button routerLink="/admin/add-categories" mat-raised-button color="accent">add category</button>
+     </div>
+    
+</mat-card>
